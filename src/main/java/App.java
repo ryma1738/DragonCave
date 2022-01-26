@@ -12,25 +12,24 @@ public class App {
 
             try {
                 int choice = Integer.parseInt(inputNum.nextLine());
-                if (choice == 1) {
-                    System.out.println(
-                            "You enter the cave and see the dragon. The dragon tells you to come closer and take some of his treasure. "
-                                    +
-                                    "'I have too much as it is'. You chose wisely and got the treasure. ");
-                } else {
-                    System.out.println(
-                            "You enter the cave and see the dragon. The dragon tells you to come closer and take some of his treasure. "
-                                    +
-                                    "As you reach down he attacks and eats you whole. You chose poorly.");
-                }
+                System.out.println(choose(choice));
                 break;
-            } catch (Exception e) {
+               } catch (Exception e) {
                 System.out.println("You must enter 1 or 2 for your answer!");
             }
 
         }
-
         inputNum.close();
-        System.exit(0);
+    }
+
+    public static String choose(int choice) {
+        if (choice == 1) {
+            return "You enter the cave and see the dragon. The dragon tells you to come closer and take some of his treasure. "
+                            +
+            "'I have too much as it is'. You chose wisely and got the treasure. ";
+        } 
+        return "You enter the cave and see the dragon. The dragon tells you to come closer and take some of his treasure. "
+                            +
+            "As you reach down he attacks and eats you whole. You chose poorly.";
     }
 }
