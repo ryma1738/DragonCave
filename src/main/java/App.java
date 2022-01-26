@@ -1,8 +1,7 @@
 
-
 import java.util.Scanner;
 
-public class DragonCaveProject1 {
+public class App {
     public static void main(String[] args) {
         System.out.println("You are in a land of dragons and their are 2 caves in front of you. " +
                 "One cave has a nice dragon who will share their loot with you. The other has a dragon " +
